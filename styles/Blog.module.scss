@@ -1,0 +1,18 @@
+.mainDiv {
+  width: 100%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.card {
+  width: 14rem;
+  height: 25rem;
+}
+@media only screen and (max-width: 600px) {
+  .mainDiv {
+    width: 100%;
+    margin: auto;
+  }
+  .card{
+    width: 100%;
+  }
+}

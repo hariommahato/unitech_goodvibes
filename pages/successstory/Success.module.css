@@ -1,0 +1,10 @@
+.row{
+    width: 90%;
+    margin:auto;
+    margin-top: 2vmax;
+}
+.image{
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+}

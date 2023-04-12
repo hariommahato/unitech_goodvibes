@@ -1,0 +1,28 @@
+.mainDiv {
+  width: 80%;
+  margin: auto;
+}
+.detailContainer {
+  text-align: center;
+}
+.text{
+  width: 50%;
+  margin: auto;
+}
+.formContainer{
+  width: 50%;
+  margin:auto;
+  margin-top: 3rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .mainDiv {
+    width: 100%;
+  }
+  .text{
+    width: 100%;
+  }.formContainer{
+    width: 100%;
+  }
+}

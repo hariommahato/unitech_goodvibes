@@ -1,0 +1,57 @@
+@use "../styles/variables" as v;
+.homeOptionButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  gap: 10px;
+}
+.button {
+  padding: 10px;
+  background-color: v.$primary-color;
+  border: none;
+}
+.button:hover {
+  background-color: v.$primary-color;
+  color: #e90064;
+}
+.homeFormPrepartionContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  gap: 1rem;
+  .preperationClassesDiv {
+    flex-basis: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .homeOptionButtonContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .preperationClassesDiv {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .homeFormPrepartionContainer {
+   flex-direction: column;
+   width: 80%;
+  }
+  .preperationClassesDiv {
+    width: 100%;
+  }
+}

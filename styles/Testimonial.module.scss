@@ -1,0 +1,60 @@
+.mainDiv {
+  margin-top: 3rem;
+  width: 90%;
+  margin: auto;
+  background-color: #ECF2FF;
+}
+.container {
+  width: 60%;
+  margin: auto;
+  padding: 2rem;
+  
+}
+.card {
+  border: none;
+  text-align: justify;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  text-align: center;
+}
+.userContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+
+@media only screen and (max-width: 360px) {
+    .mainDiv{
+        width: 100%;
+    }
+    .container {
+     width: 100%;
+     margin: auto;
+    }
+  }
+@media only screen and (max-width: 760px) {
+    .mainDiv{
+        width: 100%;
+    }
+    .container {
+     width: 100%;
+     margin: auto;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .container {
+     width: 100%;
+     margin: auto;
+    }
+    .userContainer{
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+  }

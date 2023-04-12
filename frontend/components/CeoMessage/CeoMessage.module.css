@@ -1,0 +1,49 @@
+.row {
+  width: 100%;
+  background-color: #c0dbea;
+  height: auto;
+  min-height: 35rem;
+}
+.heading {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.column {
+  margin: auto;
+}
+.card {
+  height: 400px;
+ 
+  background-color: white;
+  width: 300px;
+  margin:auto;
+}
+.detailContainer {
+  margin: "auto";
+}
+.image {
+  height: 300px;
+  width: 100%;
+  padding: 1rem;
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    height: auto;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .detailContainer{
+        width: 100%;
+        padding: 1rem;
+    }
+    .button{
+        width: 100%;
+    }
+  .card {
+    height: auto;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../styles/variables" as v;
+.footer {
+  background-color: #060047;
+  margin-top: 3rem;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+}
+.follow {
+  color: v.$text-color;
+}
+.link:hover {
+  color: red;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+.footerDetail {
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+  margin: auto;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    text-align: center;
+  }
+}

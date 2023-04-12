@@ -1,0 +1,41 @@
+{
+  "name": "consultancy",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://goodvibes.com.np",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.3",
+    "cloudinary": "^1.35.0",
+    "cors": "^2.8.5",
+    "eslint": "^8.37.0",
+    "eslint-config-next": "^13.2.4",
+    "mongoose": "^7.0.3",
+    "next": "^13.2.4",
+    "next-auth": "^4.20.1",
+    "next-connect": "^0.13.0",
+    "next-redux-wrapper": "^8.1.0",
+    "nextjs-cors": "^2.1.2",
+    "npm": "^9.6.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.8.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-pro-sidebar": "^1.0.0",
+    "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
+    "react-whatsapp-widget": "^2.2.0",
+    "redux": "^4.2.1",
+    "sass": "^1.60.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

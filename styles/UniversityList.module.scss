@@ -1,0 +1,56 @@
+// @use "../styles/variables" as v;
+// .mainContainer {
+//   background-color: #c9eeff;
+//   width: 100%;
+//   margin-top: 3rem;
+//   .titleContainer {
+//     width: 80%;
+//     margin: auto;
+//     padding-top: 1rem;
+//     .h3 {
+//       color: v.$text-color;
+//     }
+//     .h2 {
+//       color: v.$primary-color;
+//     }
+//   }
+// }
+// .listContainer {
+//   width: 80%;
+//   margin: auto;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+//   gap: 10px;
+//   padding-bottom: 3rem;
+
+
+//   .card {
+//     width: 15rem;
+//     height: 14rem;
+//     position: relative;
+//     margin: auto;
+//     .button {
+//       position: absolute;
+//       bottom: 0;
+//       width: 80%;
+//       background-color: #0e8388;
+//       border: none;
+//       padding: 0.5rem;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 600px) {
+//   .listContainer {
+//     width: 100%;
+//     margin: auto;
+//   }
+// }
+// @media only screen and (max-width: 400px) {
+//   .listContainer {
+//     width: 100%;
+//     margin: auto;
+
+//   }
+// }

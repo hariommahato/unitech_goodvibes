@@ -1,0 +1,24 @@
+
+.nainContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.card {
+  border: none;
+  height: 25vw;
+  margin-bottom: 5vmax;
+  .name {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card{
+    height: 40vw;
+  }
+  
+}

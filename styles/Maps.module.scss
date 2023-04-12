@@ -1,0 +1,12 @@
+
+.mainDiv{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainDiv {
+     width: 100%;
+    }
+  }

@@ -1,0 +1,27 @@
+.contentContainer {
+  background-color: #E74646;
+  color: white;
+  padding: 1rem;
+}
+.basicForm {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  height: 25rem;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  Button {
+    background-color: #E74646;
+    border: none;
+  }
+}
+
