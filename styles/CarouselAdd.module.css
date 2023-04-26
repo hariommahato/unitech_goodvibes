@@ -1,11 +1,12 @@
 .card{
-    display: flex;
-    width: 80%;
-    flex-direction: row;
-    /* align-items: center; */
-    justify-content:center;
-    gap:3rem;
+    width: 100%;
+    margin-top: 3vmax;
+
     
+}
+.form{
+    width: 60%;
+    margin: auto;
 }
 .imagePreview{
     width: 10px;

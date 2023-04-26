@@ -13,7 +13,11 @@ import { useCreateSuccessStoryMutation } from "@/frontend/services/api";
 const SuccessStory = () => {
   const [createSuccessStory, { isError, isLoading, isSuccess }] =
     useCreateSuccessStoryMutation();
-  const router=useRouter()
+  const router = useRouter();
+  const [successData, setSuccessData] = useState({
+    name: "",
+  });
+  const { name } = successData;
 
   const [images, setImages] = useState("../favicon.io");
   const [imagePreview, setImagePreview] = useState("/favicon.io");
@@ -24,12 +28,12 @@ const SuccessStory = () => {
     }
     if (isSuccess) {
       toast.success("Created Successfully");
-      router.push("/admin/dashboard/successstory")
+      router.push("/admin/dashboard/successstory");
     }
-  });
+  },[isError,isSuccess]);
   const submitHandler = (e) => {
     e.preventDefault();
-    const data = {  images };
+    const data = { images, name };
     createSuccessStory(data);
   };
 
@@ -43,7 +47,9 @@ const SuccessStory = () => {
         }
       };
       profile.readAsDataURL(e.target.files[0]);
-    } 
+    } else {
+      setSuccessData({ ...successData, [e.target.name]: e.target.value });
+    }
   };
 
   return (
@@ -54,12 +60,19 @@ const SuccessStory = () => {
         <>
           <Toaster />
           <div className={styles.card}>
-            <form onSubmit={submitHandler}>
-              <h5 style={{ textAlign: "center", padding: "1rem" }}>
+            <form onSubmit={submitHandler} className={styles.form}>
+              <h3 className="text-center">
                 Add SuccessStory Data
-              </h5>
-
-            
+              </h3>
+              <div>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter Name/Title of service"
+                  name="name"
+                  value={name}
+                  onChange={onChange}
+                />
+              </div>
               <div className="my-3">
                 <input
                   type="file"
@@ -83,8 +96,7 @@ const SuccessStory = () => {
                 id="createProductBtn"
                 type="submit"
                 disabled={isLoading ? true : false}
-                
-                style={{width:"100%",marginTop:"2rem"}}
+                style={{ width: "100%", marginTop: "2rem" }}
               >
                 submit
               </Button>
@@ -101,7 +113,7 @@ SuccessStory.getLayout = function PageLayout(page) {
   return (
     <>
       <Providers>
-      <DashboardNavbar/>
+        <DashboardNavbar />
         <div style={{ display: "flex" }}>
           <DashboardSidebar />
           {page}

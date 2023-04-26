@@ -15,16 +15,16 @@ const SuccessStory = () => {
         {data?.success?.map((item, i) => {
           return (
             <Col lg={3} md={4} sm={12} className="my-2">
-            <Link href={item?.images?.url}>
-            <Image
-                src={item?.images?.url}
-                height={"0"}
-                width={"0"}
-                sizes="100vw"
-                className={styles.image}
-              />
-            </Link>
-             
+              <Link href={item?.images?.url}>
+                <Image
+                  src={item?.images?.url}
+                  height={"0"}
+                  width={"0"}
+                  sizes="100vw"
+                  className={styles.image}
+                />
+              </Link>
+              <h5>{item?.name}</h5>
             </Col>
           );
         })}

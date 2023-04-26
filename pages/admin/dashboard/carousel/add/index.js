@@ -33,7 +33,6 @@ const Carousel = () => {
     createHomeCarousel(data);
   };
   
-  {console.log(isError)}
 
   const createProductImagesChange = (e) => {
     const files = Array.from(e.target.files);

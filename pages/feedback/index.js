@@ -4,7 +4,7 @@ import { useCreateFeedbackMutation } from "@/frontend/services/api";
 import Image from "next/image";
 import { toast, Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
-import styles from "../../styles/Feedback.module.scss";
+import styles from "../../styles/CarouselAdd.module.css";
 const Feedback = () => {
   const [createFeedback, { isError, isLoading, isSuccess }] =
     useCreateFeedbackMutation();
@@ -25,11 +25,10 @@ const Feedback = () => {
       toast.success("Created Successfully");
       router.push("/");
     }
-  });
+  }, [isError, isSuccess]);
   const submitHandler = (e) => {
     e.preventDefault();
     const data = { fullname, message, images };
-    
     createFeedback(data);
   };
   const onChange = (e) => {
@@ -49,9 +48,9 @@ const Feedback = () => {
   return (
     <div>
       <Toaster />
-      <div className={styles.mainDiv}>
+      <div className={styles.card}>
         <h2 className="text-center">We were happy to hear from you</h2>
-        <Form onSubmit={submitHandler}>
+        <Form onSubmit={submitHandler} className={styles.form}>
           <div>
             <Form.Label>FullName</Form.Label>
             <Form.Control

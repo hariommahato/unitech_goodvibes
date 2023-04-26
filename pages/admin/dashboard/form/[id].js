@@ -3,7 +3,7 @@ import DashboardSidebar from "@/frontend/components/DashboardSidebar";
 import Loader from "@/frontend/components/Loader/Loader";
 import { useGetFormDetailsQuery, useUpdateFormMutation } from "@/frontend/services/api";
 import { Providers } from "@/frontend/services/provider";
-
+import styles from '../../../../styles/CarouselAdd.module.css'
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
@@ -74,16 +74,10 @@ const Contact = () => {
         <>
           <Toaster />
 
-          <Card
-            style={{
-              width: "80%",
-              //   margin: "auto",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
+          <div
+          className={styles.card}
           >
-            <form onSubmit={handleUpdate} encType={"multipart/form-data"}>
+            <form onSubmit={handleUpdate} encType={"multipart/form-data"} className={styles.form}>
               <h5>Update Student Form Data</h5>
               <Form.Control
                 type="text"
@@ -138,7 +132,7 @@ const Contact = () => {
                 Update Data
               </Button>
             </form>
-          </Card>
+          </div>
         </>
       )}
     </>

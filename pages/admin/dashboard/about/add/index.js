@@ -30,7 +30,7 @@ const About = () => {
       toast.success("Created Successfully");
       router.push("/admin/dashboard/about");
     }
-  });
+  },[isError,isSuccess]);
   const submitHandler = (e) => {
     e.preventDefault();
     const data = { message, images };
@@ -49,10 +49,10 @@ const About = () => {
         <>
           <Toaster />
           <div className={styles.card}>
-            <form onSubmit={submitHandler}>
-              <h5 style={{ textAlign: "center", padding: "1rem" }}>
+            <form onSubmit={submitHandler} className={styles.form}>
+              <h3 className="text-center">
                 Add About Data
-              </h5>
+              </h3>
 
               <div>
                 <Form.Control

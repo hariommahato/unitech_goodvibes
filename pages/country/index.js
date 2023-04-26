@@ -1,13 +1,11 @@
 import React from "react";
 import styles from "../../styles/Country.module.scss";
 import { Table } from "react-bootstrap";
+
 const Country = () => {
   return (
     <div
-      style={{
-        width: "80%",
-        margin: "auto",
-      }}
+      className={styles.mainDiv}
     >
       <h1 style={{ margin: "auto", fontWeight: "bold" }}>Study In Japan</h1>
       <div className={styles.imageDiv}></div>
@@ -171,7 +169,6 @@ const Country = () => {
           </div>
           <div>
             <h3>Recruitment Period</h3>
-            <Table>
               <Table striped="columns">
                 <thead>
                   <tr>
@@ -187,6 +184,11 @@ const Country = () => {
                     <td>July to mid-September</td>
                   </tr>
                   <tr>
+                    <td>4th semester (April)</td>
+                    <td>2 years</td>
+                    <td>September to Mid-November</td>
+                  </tr>
+                  <tr>
                     <td>7th semester (July)</td>
                     <td>1 year and 9 months</td>
                     <td>January to mid-March</td>
@@ -198,7 +200,6 @@ const Country = () => {
                   </tr>
                 </tbody>
               </Table>
-            </Table>
           </div>
         </div>
       </div>

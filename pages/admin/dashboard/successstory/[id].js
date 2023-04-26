@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import { toast, Toaster } from "react-hot-toast";
+import styles from '../../../../styles/CarouselAdd.module.css'
 
 const SuccessStory = () => {
   const router = useRouter();
@@ -23,11 +24,14 @@ const SuccessStory = () => {
 
   const [images, setImages] = useState("");
   const [imagePreview, setImagePreview] = useState("");
-  const [successData, setSuccessData] = useState();
+  const [successData, setSuccessData] = useState({
+    name: "",
+  });
+  const {name}=successData;
   useEffect(() => {
     if (data) {
-      const { images } = data?.success;
-      setSuccessData({ images });
+      const { images, name } = data?.success;
+      setSuccessData({ images, name });
       setImagePreview(images?.url);
     }
 
@@ -46,13 +50,13 @@ const SuccessStory = () => {
     e.preventDefault();
     const data = {
       images,
+      name,
     };
 
     updateSuccessStory({ id, data });
   };
-  {
-    console.log(images);
-  }
+
+
   const onChange = (e) => {
     if (e.target.name === "images") {
       const profile = new FileReader();
@@ -63,7 +67,7 @@ const SuccessStory = () => {
         }
       };
       profile.readAsDataURL(e.target.files[0]);
-    }
+    } else setSuccessData({ ...successData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -76,18 +80,17 @@ const SuccessStory = () => {
         <>
           <Toaster />
           <div
-            style={{
-              border: "1px solid red",
-              height: "auto",
-              width: "80%",
-              display: "flex",
-              justifyContent: "center",
-            }}
+            className={styles.card}
           >
-            <form onSubmit={handleUpdate} encType={"multipart/form-data"}>
+            <form onSubmit={handleUpdate} encType={"multipart/form-data"} className={styles.form}>
               <h5>Update SuccessStory Data</h5>
-
+              <Form.Control
+                name="name"
+                value={name}
+                onChange={onChange}
+              ></Form.Control>
               <input
+              className="my-3"
                 type="file"
                 name="images"
                 accept="image/*"

@@ -9,21 +9,23 @@ import { Providers } from "@/frontend/services/provider";
 import { toast, Toaster } from "react-hot-toast";
 import {
   useDeleteSuccessStoryMutation,
-  
   useGetSuccessStoryQuery,
 } from "@/frontend/services/api";
 import DashboardNavbar from "@/frontend/components/DashboardNavbar";
 
 const SuccessStory = () => {
   const { data, isLoading } = useGetSuccessStoryQuery();
-  const [deleteSuccessStory, { isSuccess, isError }] = useDeleteSuccessStoryMutation();
+  const [deleteSuccessStory, { isSuccess, isError }] =
+    useDeleteSuccessStoryMutation();
   useEffect(() => {
     if (isSuccess) {
       toast.success("Deleted Successfully");
     }
   }, [isSuccess, toast]);
 
-  {console.log(data)}
+  {
+    console.log(data);
+  }
   return (
     <>
       {isLoading ? (
@@ -41,7 +43,7 @@ const SuccessStory = () => {
               <thead>
                 <tr>
                   <th>Id</th>
-
+                  <th>Name</th>
                   <th>ImageUrl</th>
                   <th>Actions</th>
                 </tr>
@@ -51,6 +53,7 @@ const SuccessStory = () => {
                   return (
                     <tr key={i}>
                       <td>{item._id}</td>
+                      <td>{item.name}</td>
                       <td>{item?.images?.url}</td>
 
                       <td>

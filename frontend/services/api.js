@@ -4,7 +4,6 @@ export const consulApi = createApi({
   reducerPath: "consulApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://goodvibes.com.np/api",
-    // baseUrl: "http://localhost:3000/api",
   }),
   tagTypes: [
     "Carousel",

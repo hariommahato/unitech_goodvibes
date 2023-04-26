@@ -1,7 +1,7 @@
 import cloudinaryConfig from "@/backend/config/cloudinaryConfig";
 import catchAsyncErrors from "../middleware/catchAsyncErrors";
 import User from "../models/user";
-import ErrorHandler from "../utils/ErroHandler";
+
 
 cloudinaryConfig();
 

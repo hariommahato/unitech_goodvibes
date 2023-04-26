@@ -24,7 +24,7 @@ const Faq = () => {
       toast.success("Created Successfully");
       router.push("/admin/dashboard/faq");
     }
-  });
+  },[isError,isSuccess]);
   const submitHandler = (e) => {
     e.preventDefault();
     const data = { title, description };
@@ -43,10 +43,10 @@ const Faq = () => {
         <>
           <Toaster />
           <div className={styles.card}>
-            <form onSubmit={submitHandler}>
-              <h5 style={{ textAlign: "center", padding: "1rem" }}>
-                Add Faq Data
-              </h5>
+            <form onSubmit={submitHandler} className={styles.form}>
+              <h3 className="text-center">
+                Add FAQ Data
+              </h3>
 
               <div>
                 <Form.Control

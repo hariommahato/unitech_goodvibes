@@ -7,8 +7,15 @@
   background-image: url("https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   margin-top: 2rem;
 }
+.mainDiv{
+  width: 80%;
+  margin:auto;
+}
 @media only screen and (max-width: 600px) {
   .imageDiv {
     height: 10rem;
+  }
+  .mainDiv{
+    width: 80%;
   }
 }

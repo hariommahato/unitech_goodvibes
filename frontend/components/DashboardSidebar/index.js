@@ -45,17 +45,6 @@ const DashboardSidebar = () => {
             All{" "}
           </MenuItem>
         </SubMenu>
-        <SubMenu label="Carousel">
-          <MenuItem as={Link} href={`/admin/dashboard/carousel/add`}>
-            {" "}
-            Add Carousel{" "}
-          </MenuItem>
-          <MenuItem ad={Link} href={"/admin/dashboard/carousel"}>
-            {" "}
-            All{" "}
-          </MenuItem>
-        </SubMenu>
-
 
         <SubMenu label="SuccessStory">
           <MenuItem as={Link} href={`/admin/dashboard/successstory/add`}>

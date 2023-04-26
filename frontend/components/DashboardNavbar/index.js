@@ -5,6 +5,8 @@ import { useSession, signOut } from "next-auth/react";
 import { Button } from "react-bootstrap";
 import { useProSidebar } from "react-pro-sidebar";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Image from "next/image";
+import Link from "next/link";
 function DashboardNavbar() {
   const { data } = useSession();
   const { collapseSidebar } = useProSidebar();
@@ -12,19 +14,25 @@ function DashboardNavbar() {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <span onClick={() => collapseSidebar()}>
-          <AiFillCloseCircle  size={40} color="White" className="mx-3"/>
+          <AiFillCloseCircle size={40} color="White" className="mx-3" />
         </span>
         <Container>
-          <Navbar.Brand href="#home">GoodVibes Education Consultancy</Navbar.Brand>
+          <Navbar.Brand as={Link} href="/admin/dashboard">
+            <Image src={"/logo.png"} height={60} width={60} />
+            GoodVibes Education Consultancy
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <div
                 style={{
-                  textAlign: "center",
-                  width: "40%",
+                  
+                  width: "60%",
                   margin: "auto",
                   color: "white",
+                  display:"flex",
+                  gap:"10px"
+                 
                 }}
               >
                 <span style={{ color: "white" }}>Welcome</span>

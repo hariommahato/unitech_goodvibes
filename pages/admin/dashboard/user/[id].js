@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { toast, Toaster } from "react-hot-toast";
+import styles from '../../../../styles/CarouselAdd.module.css'
 const User = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -62,16 +63,10 @@ const User = () => {
         <>
           <Toaster />
           <div
-            style={{
-              border: "1px solid red",
-              height: "auto",
-              width: "80%",
-              display: "flex",
-              justifyContent: "center",
-            }}
+            className={styles.card}
           >
-            <form onSubmit={handleUpdate} encType={"multipart/form-data"}>
-              <h5>Update User </h5>
+            <form onSubmit={handleUpdate} encType={"multipart/form-data"} className={styles.form}>
+              <h3 className="text-center">Update User </h3>
               <Form.Control
               type="text"
                 name="username"

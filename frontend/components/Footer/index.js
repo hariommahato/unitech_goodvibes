@@ -64,7 +64,7 @@ const Footer = () => {
                 target="_blank"
                 className={styles.link}
               >
-                 info.goodvives@gmail.com
+                info.goodvives@gmail.com
               </Link>
             </div>
             <div>
@@ -90,15 +90,24 @@ const Footer = () => {
         </Row>
       </Container>
       <Container className={styles.footerDetail}>
-      <p>&copy; 2023 GoodVibes Education Consultancy Pvt.Ltd.All right reserved</p>
+        <p>
+          &copy; 2023 GoodVibes Education Consultancy Pvt.Ltd.All right reserved
+        </p>
 
-        <div style={{display:"flex",textAlign:"center",justifyContent:"center",gap:"0.3vmax"}}>
+        <div
+          style={{
+            display: "flex",
+            textAlign: "center",
+            justifyContent: "center",
+            gap: "0.3vmax",
+          }}
+        >
           Designed & Developed By
           <Link
             href={"https://unitechhostnepal.com/"}
-            style={{ textDecoration: "none", cursor: "pointer" }}
+            style={{ textDecoration: "none", cursor: "pointer",color:"#05BFDB" }}
           >
-            <p>Unitech It Solution </p>
+            <p>UNITECH IT SOLUTION </p>
           </Link>
         </div>
       </Container>

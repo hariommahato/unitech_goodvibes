@@ -17,13 +17,41 @@ const MeetTheTeam = () => {
         </p>
 
         <Row>
-
-          <Col sm={12} md={6} lg={4} style={{
-            margin:"auto"
-          }}>
+          <Col
+            sm={12}
+            md={6}
+            lg={4}
+            style={{
+              margin: "auto",
+            }}
+          >
             <Card className={styles.card}>
-              <Card.Img
+              <Image
+                src={"/cord.jpeg"}
+                height={"0"}
+                width={"0"}
+                sizes="100vw"
+                style={{ height: "100%", width: "100%" }}
+              />
+              <h5 className={styles.name}>Kai Tada</h5>
+              <p>Co-ordinator in japan</p>
+            </Card>
+          </Col>
+
+          <Col
+            sm={12}
+            md={6}
+            lg={4}
+            style={{
+              margin: "auto",
+            }}
+          >
+            <Card className={styles.card}>
+              <Image
                 src={"/maniram.jpg"}
+                height={"0"}
+                width={"0"}
+                sizes="100vw"
                 style={{ height: "100%", width: "100%" }}
               />
               <h5 className={styles.name}>Mr. Mani Ram Puri</h5>
@@ -31,12 +59,20 @@ const MeetTheTeam = () => {
               <p>JLPT N2 Level Holder</p>
             </Card>
           </Col>
-          <Col sm={12} md={6} lg={4} style={{
-            margin:"auto"
-          }}>
+          <Col
+            sm={12}
+            md={6}
+            lg={4}
+            style={{
+              margin: "auto",
+            }}
+          >
             <Card className={styles.card}>
-              <Card.Img
+              <Image
                 src={"/khemraj.jpg"}
+                height={"0"}
+                width={"0"}
+                sizes="100vw"
                 style={{ height: "100%", width: "100%" }}
               />
               <h5 className={styles.name}>Mr.Khem Raj Giri</h5>

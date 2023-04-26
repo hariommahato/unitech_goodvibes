@@ -73,7 +73,7 @@ const Login = () => {
             </Form.Group>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Button
-                variant="primary"
+              variant="primary"
                 type="submit"
                 onClick={handleSubmit}
                 style={{ textAlign: "center", width: "40%" }}

@@ -24,7 +24,7 @@ const nextConfig = {
     CLOUDINARY_API_KEY: "557477556585753",
     CLOUDINARY_API_SECRET: "sEE6XWIEmTmIvxFnr7Xkvg5HkMs",
     NEXTAUTH_SECRET: "asfsdfkulsghdfbjkshdfv",
-    NEXTAUTH_URL: "https://goodvibes.com.np",
+    // NEXTAUTH_URL: "https://goodvibes.com.np",
   },
 };
 

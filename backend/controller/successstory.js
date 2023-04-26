@@ -6,7 +6,7 @@ import cloudinary from "cloudinary";
 cloudinaryConfig();
 
 export const createSuccessStory = catchAsyncErrors(async (req, res, next) => {
-  const { images } = req.body;
+  const { images, name } = req.body;
 
   const result = await cloudinary.v2.uploader.upload(images, {
     folder: "Consultancy",
@@ -17,6 +17,7 @@ export const createSuccessStory = catchAsyncErrors(async (req, res, next) => {
       public_id: result.public_id,
       url: result.secure_url,
     },
+    name,
   });
 
   res.status(200).json({ success: true });
@@ -42,13 +43,18 @@ export const getAllSuccessStory = catchAsyncErrors(async (req, res, next) => {
 
 export const updateSuccessStory = catchAsyncErrors(async (req, res, next) => {
   const data = await Success.findById(req.query.id);
-  const { images } = req.body;
+  const { images,name} = req.body;
 
   if (!data)
     res.status(404).json({
       message: "Not Found",
     });
 
+    if (data) {
+     
+      data.name = name;
+    }
+  
   if (images !== "") {
     const result = await cloudinary.v2.uploader.upload(images, {
       folder: "Consultancy",

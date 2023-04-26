@@ -56,7 +56,7 @@ const About = () => {
                 <ProgressBar
                   variant="danger"
                   now={100}
-                  label="IELT/TOEFL"
+                  label="Languages"
                   className={styles.progressBar}
                 />
               </div>

@@ -1,4 +1,4 @@
-import HeadingContainer from "@/frontend/components/HeadingContainer";
+
 import HomeForm from "@/frontend/components/HomeForm";
 import React from "react";
 import {  Row, Col, Card } from "react-bootstrap";
@@ -48,7 +48,8 @@ const Contact = () => {
           <div className="my-3">
             <Card className={styles.card}>
               <span className={styles.iconContainer}>
-                <AiFillMail size={20} /> Email :+977-01-5916120, 9869060120
+                <AiFillMail size={20} /> Email :info.goodvives@gmail.com
+
               </span>
             </Card>
           </div>

@@ -11,7 +11,9 @@ const successStorySchema = new mongoose.Schema({
       required: true,
     },
   },
-  
+  name: {
+    type: String,
+  },
 });
 export default mongoose.models?.SuccessStory ||
   mongoose.model("SuccessStory", successStorySchema);

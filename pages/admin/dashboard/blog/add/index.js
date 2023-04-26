@@ -17,7 +17,7 @@ const Blog = () => {
     name: "",
     description: "",
   });
-  const router=useRouter()
+  const router = useRouter();
   const { description, name } = blogData;
   const [images, setImages] = useState("../favicon.io");
   const [imagePreview, setImagePreview] = useState("/favicon.io");
@@ -28,9 +28,9 @@ const Blog = () => {
     }
     if (isSuccess) {
       toast.success("Created Successfully");
-      router.push("/admin/dashboard/blog")
+      router.push("/admin/dashboard/blog");
     }
-  });
+  }, [isError, isSuccess]);
   const submitHandler = (e) => {
     e.preventDefault();
     const data = { name, description, images };
@@ -52,8 +52,6 @@ const Blog = () => {
     }
   };
 
-  {console.log(images)}
-
   return (
     <>
       {isLoading ? (
@@ -62,15 +60,13 @@ const Blog = () => {
         <>
           <Toaster />
           <div className={styles.card}>
-            <form onSubmit={submitHandler}>
-              <h5 style={{ textAlign: "center", padding: "1rem" }}>
-                Add Blog Data
-              </h5>
+            <form onSubmit={submitHandler} className={styles.form}>
+              <h3 className="text-center">Add Blog Data</h3>
 
               <div>
                 <Form.Control
                   type="text"
-                  placeholder="Enter Name/Title of service"
+                  placeholder="Enter Name"
                   name="name"
                   value={name}
                   onChange={onChange}
@@ -109,8 +105,7 @@ const Blog = () => {
                 id="createProductBtn"
                 type="submit"
                 disabled={isLoading ? true : false}
-                
-                style={{width:"100%",marginTop:"2rem"}}
+                style={{ width: "100%", marginTop: "2rem" }}
               >
                 submit
               </Button>
@@ -127,7 +122,7 @@ Blog.getLayout = function PageLayout(page) {
   return (
     <>
       <Providers>
-      <DashboardNavbar/>
+        <DashboardNavbar />
         <div style={{ display: "flex" }}>
           <DashboardSidebar />
           {page}
